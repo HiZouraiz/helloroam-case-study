@@ -1,6 +1,6 @@
 # HelloRoam — Global eSIM Travel Data App 🌍📱
 
-> React Native app that lets travelers buy prepaid eSIM data plans for **190+ countries in 22 languages** — no physical SIM, activate by scanning a QR code. Live on iOS + Android with a 5/5 App Store rating.
+> React Native app that lets travelers buy prepaid eSIM data plans for **190+ countries in 22 languages** — no physical SIM, activate by scanning a QR code. Live on iOS + Android with a 5/5 App Store rating. I led the mobile team and built the AI content + localization engine behind the product's multilingual pages.
 
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-lightgrey)
 ![Coverage](https://img.shields.io/badge/Coverage-190%2B_countries-0D96F6)
@@ -24,9 +24,23 @@
 
 ## 👨‍💻 My Role
 
-**Lead React Native Engineer**
+**Senior Team Lead Developer**
 
-I worked on the cross-platform mobile app, delivering the traveler-facing experience end to end: plan discovery, purchase, eSIM activation, and full multi-language localization across iOS and Android.
+I led the mobile development team and owned the traveler-facing experience end to end — plan discovery, purchase, and eSIM activation on iOS and Android. Alongside the app, I designed and built the **AI-powered SEO & localization content engine** that produces the product's multilingual, SEO-ready pages across all 22 languages.
+
+---
+
+## 🤖 AI-Powered SEO & Localization Content Engine (highlight)
+
+To publish and rank content in **22 languages** without a manual per-language workflow, I built an AI engine that takes a single piece of source content and automatically produces a fully localized, SEO-ready page for every market. From one input it generates:
+
+- 🔑 **SEO keyword research** — surfaces target keywords per language/region
+- 🌍 **Translation into 22 languages** — LLM-driven, context-aware (not literal word-for-word)
+- 🖼️ **Localized images** — generates market-appropriate imagery for each page
+- 🔗 **Slugs & metadata** — SEO-friendly URLs, titles, and meta descriptions per locale
+- 📄 **Localized page assembly** — stitches it all into publish-ready pages at scale
+
+**Impact:** turned a task that would need 22 translators + SEO specialists + designers into an automated pipeline — enabling global, SEO-optimized content coverage from a single source.
 
 ---
 
@@ -38,6 +52,7 @@ I worked on the cross-platform mobile app, delivering the traveler-facing experi
 | Navigation | React Navigation |
 | State | Redux / Zustand |
 | Localization | i18n across **22 languages** |
+| AI / Automation | LLMs (OpenAI / Anthropic), LangChain — translation, SEO, image generation |
 | Backend / API | Node.js · REST |
 | Activation | eSIM / GSMA SGP.22 QR provisioning |
 
@@ -47,10 +62,11 @@ I worked on the cross-platform mobile app, delivering the traveler-facing experi
 
 ## 🧩 Engineering Highlights
 
+- **AI SEO & localization engine** — single-source → 22 localized, SEO-optimized pages with automated keyword research, translation, localized images, slugs, and metadata (see section above).
 - **eSIM QR activation flow** — implemented the purchase → provisioning → QR/manual activation journey aligned with GSMA SGP.22 standards, with clear error and retry states for a non-technical, global audience.
 - **Localization at scale (22 languages)** — architected the i18n layer so copy, currencies, and date/number formats adapt per locale from a single codebase — no per-language builds.
 - **Multi-country plan selection UX** — designed selection for single-country, regional, and multi-region plans across 190+ countries without overwhelming the user.
-- **Reliable global payments** — handled in-app purchase flows, edge cases, and receipts/refunds for unactivated eSIMs across many markets.
+- **Team leadership** — led the mobile dev team, reviewing architecture and driving delivery to the App Store and Play Store.
 
 ---
 
@@ -71,4 +87,4 @@ _Add public App Store / Play Store screenshots here (safe to use — they're alr
 
 ---
 
-*Built as Lead React Native Engineer. Case study only — no confidential code or data is shared, in accordance with NDA.*
+*Built as Senior Team Lead Developer. Case study only — no confidential code or data is shared, in accordance with NDA.*
