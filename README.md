@@ -35,5 +35,5 @@ Add the public App Store and Play Store screenshots here. They are already publi
 ## Links
 
 - Website: https://helloroam.com
-- App Store: add link
-- Google Play: add link
+- App Store: https://apps.apple.com/us/app/helloroam-esim-travel-data/id6755227375
+- Google Play: https://play.google.com/store/apps/details?id=com.helloroam.helloroam
