@@ -1,90 +1,39 @@
-# HelloRoam — Global eSIM Travel Data App 🌍📱
+# HelloRoam
 
-> React Native app that lets travelers buy prepaid eSIM data plans for **190+ countries in 22 languages** — no physical SIM, activate by scanning a QR code. Live on iOS + Android with a 5/5 App Store rating. I led the mobile team and built the AI content + localization engine behind the product's multilingual pages.
+HelloRoam is an eSIM service that lets travelers buy prepaid mobile data for more than 190 countries and get online by scanning a QR code, without a physical SIM. It is live on iOS and Android and has a 5 out of 5 rating on the App Store.
 
-![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-lightgrey)
-![Coverage](https://img.shields.io/badge/Coverage-190%2B_countries-0D96F6)
-![Languages](https://img.shields.io/badge/Localized-22_languages-brightgreen)
-![Rating](https://img.shields.io/badge/App_Store-5%2F5-brightgreen)
+I worked on HelloRoam as a senior team lead. I led two teams, the mobile app team and the website development team, and I was responsible for delivery on both. I also designed and built the AI engine that handles the product's content, SEO and translation across all 22 languages it supports.
 
-> ℹ️ **Case study** of production work built under NDA. It describes what the product does and the engineering problems I worked on — using only publicly available information (App Store / Play Store listings and the public website). **No proprietary source code or confidential data is included.**
+This repository is a case study. Everything here comes from the public app store listings and the public website. The work was done under NDA, so there is no proprietary code or private data in this repo.
 
----
+## What the product does
 
-## 📖 Overview
+Travelers buy a data plan online, scan a QR code, and connect to a local network as soon as they land. It covers more than 190 countries across 199 carrier networks, supports dual SIM so people keep their home number, and includes hotspot sharing. The whole experience is localized into 22 languages.
 
-**HelloRoam** is a digital eSIM provider that lets international travelers buy prepaid mobile data plans and connect instantly on arrival — replacing expensive carrier roaming and airport SIM hunts. Users buy a plan online, scan a QR code, and connect to local carrier networks across the globe.
+## What I did
 
-- 🌐 **190+ countries** of coverage across 199+ carrier networks
-- 🗣️ **22 languages** — full localization for a global traveler audience
-- 📲 Live on **iOS + Android** · **5/5 App Store rating**
-- 💳 In-app plan purchase, QR-based eSIM activation, dual-SIM support, hotspot sharing
+As senior team lead I ran both the mobile and website teams, reviewed the architecture on both sides, and kept delivery moving to the App Store and Play Store. On the engineering side, the piece I owned most directly was the AI content and localization system that the marketing site depends on to publish pages in every supported language.
 
----
+## The AI content and localization engine
 
-## 👨‍💻 My Role
+Publishing content by hand in 22 languages is not realistic, so I built a system that takes one piece of source content and turns it into a finished, localized page for each market. From a single input it does the SEO keyword research for each language, translates the content so it reads naturally instead of word for word, generates images that suit each locale, and produces the slug, title and meta description for search. The output is a publish-ready page per language from one source, rather than needing a separate translator, SEO specialist and designer for each one.
 
-**Senior Team Lead Developer**
+## Tech
 
-I led the mobile development team and owned the traveler-facing experience end to end — plan discovery, purchase, and eSIM activation on iOS and Android. Alongside the app, I designed and built the **AI-powered SEO & localization content engine** that produces the product's multilingual, SEO-ready pages across all 22 languages.
+React Native with Expo and TypeScript for the app, React Navigation, and Redux or Zustand for state. Internationalization across 22 languages. Node.js and REST on the backend. The eSIM activation follows the GSMA SGP.22 QR provisioning flow. The AI engine uses large language models (OpenAI and Anthropic) with LangChain for translation, SEO and image generation.
 
----
+<!-- Zouraiz: correct any tech detail here that is not exact. -->
 
-## 🤖 AI-Powered SEO & Localization Content Engine (highlight)
+## Some of the harder parts
 
-To publish and rank content in **22 languages** without a manual per-language workflow, I built an AI engine that takes a single piece of source content and automatically produces a fully localized, SEO-ready page for every market. From one input it generates:
+The eSIM activation flow was the trickiest piece on the app side. It goes from purchase to provisioning to QR or manual activation following the GSMA standard, and it had to stay clear for non-technical travelers, with sensible error and retry states. Localizing across 22 languages meant building the i18n layer so copy, currency and date formats adapt per locale from one codebase, with no separate builds. Plan selection also took some care, since users can pick single-country, regional or multi-region plans across more than 190 countries and it can't feel overwhelming. And running two teams meant staying on top of both the app and the site at once.
 
-- 🔑 **SEO keyword research** — surfaces target keywords per language/region
-- 🌍 **Translation into 22 languages** — LLM-driven, context-aware (not literal word-for-word)
-- 🖼️ **Localized images** — generates market-appropriate imagery for each page
-- 🔗 **Slugs & metadata** — SEO-friendly URLs, titles, and meta descriptions per locale
-- 📄 **Localized page assembly** — stitches it all into publish-ready pages at scale
+## Screenshots
 
-**Impact:** turned a task that would need 22 translators + SEO specialists + designers into an automated pipeline — enabling global, SEO-optimized content coverage from a single source.
+Add the public App Store and Play Store screenshots here. They are already public, so they are fine to use.
 
----
+## Links
 
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Mobile | React Native, Expo, TypeScript |
-| Navigation | React Navigation |
-| State | Redux / Zustand |
-| Localization | i18n across **22 languages** |
-| AI / Automation | LLMs (OpenAI / Anthropic), LangChain — translation, SEO, image generation |
-| Backend / API | Node.js · REST |
-| Activation | eSIM / GSMA SGP.22 QR provisioning |
-
-<!-- Zouraiz: review this stack table — I inferred it from your profile's listed skills. Correct any line that isn't exact. -->
-
----
-
-## 🧩 Engineering Highlights
-
-- **AI SEO & localization engine** — single-source → 22 localized, SEO-optimized pages with automated keyword research, translation, localized images, slugs, and metadata (see section above).
-- **eSIM QR activation flow** — implemented the purchase → provisioning → QR/manual activation journey aligned with GSMA SGP.22 standards, with clear error and retry states for a non-technical, global audience.
-- **Localization at scale (22 languages)** — architected the i18n layer so copy, currencies, and date/number formats adapt per locale from a single codebase — no per-language builds.
-- **Multi-country plan selection UX** — designed selection for single-country, regional, and multi-region plans across 190+ countries without overwhelming the user.
-- **Team leadership** — led the mobile dev team, reviewing architecture and driving delivery to the App Store and Play Store.
-
----
-
-## 📸 Screenshots
-
-_Add public App Store / Play Store screenshots here (safe to use — they're already public)._
-
-<!-- Create a docs/ folder, drop images in, and reference them like: -->
-<!-- ![Onboarding](docs/shot1.png) -->
-
----
-
-## 🔗 Links
-
-- 🌐 Website: https://helloroam.com
-- 🍎 App Store: _add link_
-- 🤖 Google Play: _add link_
-
----
-
-*Built as Senior Team Lead Developer. Case study only — no confidential code or data is shared, in accordance with NDA.*
+- Website: https://helloroam.com
+- App Store: add link
+- Google Play: add link
